@@ -20,10 +20,10 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Make tests
-        run: pnpm test
+        run: npm test
 
       - name: Deploy Completed
         run: echo "Deploying to production completed successfully"
