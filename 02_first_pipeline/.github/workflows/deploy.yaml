@@ -7,22 +7,23 @@ on:
     branches: [prod]
 
 jobs:
-  runs-on: ubuntu-latest
+  deploy: # Ajout d'un nom de job
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
 
-    - name: Set up Nodejs
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Set up Nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-    - name: Install dependencies
-      run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
 
-    - name: Make tests
-      run: pnpm test
+      - name: Make tests
+        run: pnpm test
 
-    - name: Deploy Completed
-      run: echo "Deploying to production completed successfully"
+      - name: Deploy Completed
+        run: echo "Deploying to production completed successfully"
