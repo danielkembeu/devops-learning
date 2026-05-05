@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  deploy: # Ajout d'un nom de job
+  Deployment-Pipeline: # Ajout d'un nom de job
     runs-on: ubuntu-latest
 
     steps:
